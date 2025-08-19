@@ -87,3 +87,15 @@ body {
     background-color: #eadbc8;
     border-color: #dac0ae;
 }
+
+.answer-btn.correct {
+    background-color: #e6fff0;
+    border-color: #a3f04c;
+    color: #28a745;
+}
+
+.answer-btn.incorrect {
+    background-color: #fff0f0;
+    border-color: #ffbdbd;
+    color: #dc3545;
+}
