@@ -113,5 +113,30 @@ body {
     background-color: #e86a33;
     width: 0%;    /* This is because when we start the game, the progress is nothing. Interactivity increases this. */
     transition: width 0.3s ease;
-    
+}
+
+/* Result Screen */
+
+#result-screen h1 {
+    color: #e86a33;
+    margin-bottom: 30px;
+}
+
+.result-info {
+    background-color: #f8f0e5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.result-info p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#result-message {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e86a33;
 }
