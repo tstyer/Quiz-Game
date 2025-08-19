@@ -25,3 +25,35 @@ body {
     overflow: hidden;
     position: relative;
 }
+
+/* Screens */
+
+.screen {
+    display: none; /* Initially set them to hide, unless ACTIVE */
+    padding: 2rem;
+    text-align: center;
+}
+
+.screen.active {   /* Putting no space between the classes selects elements with both classses. */
+    display: block;
+}
+
+/* Start screen */
+
+#start-screen h1 {
+    color: #e86a33;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.quiz-header {
+    margin-bottom: 30px;
+}
+
+#question-text {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
