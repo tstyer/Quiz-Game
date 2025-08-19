@@ -3,12 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Time!</title>
+    <title>Quiz Game</title>
 
     <!--Internal CSS-->
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+    <div class="container">
+
+        <!--Intitial Screen-->
+        <div class="screen active" id="start-screen">
+            <h1>Quiz time!</h1>
+            <p>Test your knowledge with these fun questions.</p>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <!--Quiz Screen-->
+        <div class="screen" id="quiz-screen">
+
+            <!--Question and progress section-->
+            <div class="quiz-header">
+                <h2 id="question-text">Question goes here.</h2>
+                <div class="quiz-info">
+                    <p>
+                        Question <span id="current-question">1</span> of <span>5</span>
+                    </p>
+
+                    <p>
+                        Score <span id="scroe">0</span>
+                    </p>
+                </div>
+            </div>
+
+            <!--Quiz answers will go here-->
+            <div id="answers-container" class="answers-container">
+                <!--Answer buttons go here-->
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress" id="progress">
+
+                </div>
+            </div>
+        </div>
+
+        <!--Results Screen-->
+        <div id="results-screen" class="screen">
+            <h1>Quiz Results</h1>
+            <div class="result-info">
+                <p>You scored <span id="final-score">o</span> out of <span id="max-score">5</span></p>
+                <div id="result-message">
+                    <p>Keep studying! You'll get there!</p>
+                </div>
+            </div>
+            <button id="restart-btn">Restart Quiz</button></div>
+        </div>
+
+    </div>
     
 </body>
 </html>
