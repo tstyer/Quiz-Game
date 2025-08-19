@@ -57,3 +57,33 @@ body {
     line-height: 1.4;
 }
 
+.quiz-info {
+    display: flex;
+    justify-content: space-between;   /* Used space betwen, as there are 2 elements we want pushed away from on another. */
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.answer-btn {
+    background-color: #f8f0e5;
+    color: #333;
+    border: 2px solid #eadbc8;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s;
+}
+
+.answer-btn:hover {
+    background-color: #eadbc8;
+    border-color: #dac0ae;
+}
