@@ -28,10 +28,25 @@ const quizQuestions [    // Within the parent array, there will be a list of obj
 ]
 
 
-// Quiz Variables 
+// QUIZ VARIABLES
 let currentQuestionIndex = 0;    // Start the beginning, we start with the first vallue in the array = 0
 let score = 0;                   // Score is zero at the beginning. 
 let answersDisabled = false;
 
 totalQuestionsSpan.textContent = quizQuestions.length // The maximum number that can fill the question span is the total in the array. 
 maxScoreSpan.textContent = quizQuestions.length       // Same situation for the maximum score. 
+
+// EVENT LISTENERS
+startButton.addEventListener("click", startQuiz);     // Upon clicking the start quick button
+restartButton.addEventListener("click", restartQuiz);
+
+
+// FUNCTIONS
+function startButton() {
+    console.log("Quiz Started");
+
+}
+
+function restartQuiz() {
+    console.log(Quiz Restart)
+}
