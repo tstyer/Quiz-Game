@@ -44,9 +44,21 @@ restartButton.addEventListener("click", restartQuiz);
 // FUNCTIONS
 function startButton() {
     console.log("Quiz Started");
+    currentQuestionIndex = 0;     // Set to zero as we are just starting the quiz. 
+    scoreSpan.textContent = 0;
 
+    startScreen.classList.remove("active"); // When we start the quiz, we want this screen to deactivate. 
+    quizScreen.classList.add("active");
+
+    showQuestion();
+}
+
+function showQuestion() {
+    
 }
 
 function restartQuiz() {
     console.log(Quiz Restart)
 }
+
+// CONTINUE FROM 44:30 YT CHANNEL
