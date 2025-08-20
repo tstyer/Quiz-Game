@@ -124,6 +124,39 @@ function showQuestion() {
 
 function selectAnswer() {
   if(answersDisabled) return; // This stops and doesn't return anything if answerDisabled = true. 
+
+  answersDisabled = true;
+
+  const selectedButton = event.target;
+  const isCorrect = selectedButton.dataset.correct === true;
+
+  array.from(answersContainer.children).forEach(button => {
+    if(button.dataset.correct === "true") {
+      button.classList.add("correct");
+    } else {
+      button.classList.add("incorrect");
+    }
+  });
+  
+  if(isCorrect) {
+    score++;
+    scoreSpan.textContent = score;
+  }
+
+  setTimeout(() => {
+    currentQuestionIndex++;
+
+    // Check if there are more questions or if quiz is over. 
+    if(currentQuestionIndex < quizQuestions.length) {
+      showQuestion();
+    } else {
+      showResults();
+    }
+  }, 1000)
+}
+
+function showResults() {
+  
 }
 
 function restartQuiz() {
