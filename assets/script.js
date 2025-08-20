@@ -107,6 +107,23 @@ function showQuestion() {
     questionText.textContent = currentQuestion.question
 
     answersContainer.innerHTML = "";
+
+    currentQuestion.answers.forEach(answer => {
+      const button = document.createElement("button");
+      button.textContent = answer.text;
+      button.classList.add("answer-btn");
+
+      // What is dataset? For this time, it will be a property of the button element. You use data set to store data. 
+      button.dataset.correct = answer.correct;
+
+      button.addEventListener("click", selectAnswer);
+
+      answersContainer.appendChild(button);
+    });
+}
+
+function selectAnswer() {
+  if(answersDisabled) return; // This stops and doesn't return anything if answerDisabled = true. 
 }
 
 function restartQuiz() {
