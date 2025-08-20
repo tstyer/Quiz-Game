@@ -54,11 +54,22 @@ function startButton() {
 }
 
 function showQuestion() {
-    
+    // Reset the state
+    answersDisabled = false; // This means that the answers will not be disabled so we can see them. 
+
+    const currentQuestion = quizQuestions[currentQuestionIndex];
+
+    currentQuestionSpan.textContent = currentQuestionIndex + 1; // Because the index is always 1 lower than the actual. 
+
+    const progressPercent = (currentQuestionIndex / quizQuestions.length) * 100;
+    progressBar.style.width = progressPercent + "%";
+
+    questionText.textContent = currentQuestion.question
+
+    answersContainer.innerHTML = "";
 }
 
 function restartQuiz() {
     console.log(Quiz Restart)
 }
 
-// CONTINUE FROM 44:30 YT CHANNEL
